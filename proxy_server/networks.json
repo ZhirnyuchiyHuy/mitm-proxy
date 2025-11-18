@@ -1,0 +1,86 @@
+[
+  {
+    "name": "bebra",
+    "host": "adasfa",
+    "path_prefix": "eafjids",
+    "response_code": 500
+  },
+  {
+    "name": "test1",
+    "host": "api.backpack.exchange",
+    "path_prefix": "/api/v1/account",
+    "response_code": 500
+  },
+  {
+    "name": "pty",
+    "host": "api.backpack.exchange",
+    "path_prefix": "/api/v1/markPrices",
+    "response_code": 500
+  },
+  {
+    "name": "тикеры",
+    "host": "api.backpack.exchange",
+    "path_prefix": "/api/v1/tickers",
+    "response_code": 500
+  },
+  {
+    "name": "orders",
+    "host": "api.backpack.exchange",
+    "path_prefix": "/api/v1/orders",
+    "response_code": 500
+  },
+  {
+    "name": "position",
+    "host": "api.backpack.exchange",
+    "path_prefix": "/api/v1/position",
+    "response_code": 500
+  },
+  {
+    "name": "balance_interval",
+    "host": "api.backpack.exchange",
+    "path_prefix": "/wapi/v1/history/balances?interval=1d",
+    "response_code": 500
+  },
+  {
+    "name": "markets",
+    "host": "api.backpack.exchange",
+    "path_prefix": "/api/v1/borrowLend/markets",
+    "response_code": 500
+  },
+  {
+    "name": "testneapi",
+    "host": "backpack.exchange",
+    "path_prefix": "/_next/static/chunks/3534097f62194ffc.js",
+    "response_code": 500
+  },
+  {
+    "name": "klines",
+    "host": "api.backpack.exchange",
+    "path_prefix": "/api/v1/klines?symbol=BTC_USDC_PERP&interval=1h&startTime=1761861600",
+    "response_code": 500
+  },
+  {
+    "name": "collateral",
+    "host": "api.backpack.exchange",
+    "path_prefix": "/api/v1/capital/collateral",
+    "response_code": 500
+  },
+  {
+    "name": "strategies",
+    "host": "api.backpack.exchange",
+    "path_prefix": "/api/v1/strategies",
+    "response_code": 500
+  },
+  {
+    "name": "maxOrderQuantity",
+    "host": "api.backpack.exchange",
+    "path_prefix": "/wapi/v1/accountLimits/maxOrderQuantity?symbol=BTC_USDC_PERP&side=Bid&price=101216.2&autoLendRedeem=true&reduceOnly=false",
+    "response_code": 500
+  },
+  {
+    "name": "positions",
+    "host": "api.backpack.exchange",
+    "path_prefix": "/api/v1/borrowLend/positions",
+    "response_code": 500
+  }
+]
