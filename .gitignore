@@ -1,9 +1,6 @@
-*.sqlite3
-network.json
-*__pycache__/
-.idea
-.venv
-*.pyc
-*.pyi
-*.pyx
-
+.gitignore
+db.sqlite3
+static/
+.idea/
+networks.json
+*__pycache__
