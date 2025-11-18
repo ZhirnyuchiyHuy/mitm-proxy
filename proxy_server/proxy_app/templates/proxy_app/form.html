@@ -1,0 +1,23 @@
+    {% load static %}
+    <!doctype html>
+    <html>
+    <head><meta charset="utf-8"><title>{% if edit %}Edit{% else %}Add{% endif %}</title>
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+    </head>
+    <body>
+    <div class="aurora-background"></div>
+
+      <h1>{% if edit %}Edit{% else %}Add{% endif %} rule</h1>
+        <div class="form-card" >
+          <form method="post">
+              {% csrf_token %}
+              {{ form.as_p }}
+                    <button type="submit">Save</button>
+
+                  <a href="{% url 'proxy_app:index' %}">
+                      <button type="button">Cancel</button>
+                  </a>
+          </form>
+        </div>
+    </body>
+    </html>

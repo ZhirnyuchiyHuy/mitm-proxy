@@ -1,0 +1,57 @@
+{% load static %}
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Networks</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+  <div class="aurora-background"></div>
+    <header>
+        <h1 class="h1">Network Rules</h1>
+    </header>
+  <p><a href="{% url 'proxy_app:add' %}">
+     <button class="knopka "type="button">Add Network</button>
+ </a></p>
+<div class="table-container" >
+  <div class="glass-card">
+    <table border="1" cellpadding="6">
+      <tr>
+        <th>name</th>
+        <th>host</th>
+        <th>path_prefix</th>
+        <th>enabled</th>
+        <th>actions</th>
+      </tr>
+
+      {% for n in networks %}
+      <tr>
+          <div class="lines-table">
+        <td>{{ n.name }}</td>
+        <td>{{ n.host }}</td>
+        <td>{{ n.path_prefix }}</td>
+        <td>
+          <form method="post" action="{% url 'proxy_app:toggle' n.pk %}">
+            {% csrf_token %}
+            <input type="checkbox" name="enable" id="enable-{{ n.pk }}" {% if n.enable %}checked{% endif %} onchange="this.form.submit()">
+          </form>
+        </td>
+        <td>
+          <a href="{% url 'proxy_app:edit' n.pk %}">
+            <button type="button">Edit</button>
+          </a>
+          <form method="post" action="{% url 'proxy_app:delete' n.pk %}" style="display:inline;">
+            {% csrf_token %}
+            <button type="submit">Delete</button>
+          </form>
+        </td>
+          </div>
+      </tr>
+      {% empty %}
+      <tr><td colspan="5">No rules</td></tr>
+      {% endfor %}
+    </table>
+  </div>
+</div>
+</body>
+</html>
+
